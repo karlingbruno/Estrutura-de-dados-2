@@ -264,8 +264,10 @@ int main(){
 				break;
 			case 2:
         encontrarRaiz(arvore,arvore->raiz);
-        arrumaNivel(arvore,arvore->raiz->esq);
-        arrumaNivel(arvore,arvore->raiz->dir);
+        if(arvore->raiz->esq != arvore->sentinela)
+          arrumaNivel(arvore,arvore->raiz->esq);
+        if(arvore->raiz->dir != arvore->sentinela)
+          arrumaNivel(arvore,arvore->raiz->dir);
         imprimir(arvore,arvore->raiz);
 				break;
       case 0 :
